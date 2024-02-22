@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AppPizzas</title>
+    <script src=".//scrips/logica.js" type="module"></script>
+    <link rel="stylesheet" href="./styles/main.css" />
+  </head>
+  
+  <body>
+    <header>
+      <h1>!Ayuda a Edu a pedir su pizza¡</h1>
+    </header>
+    
+    <main>
+      <h3>TIPO</h3>
+      
+      <label>Tamaño de la pizza</label> <br />
+      <div>
+        <select name="size" class="sizePizza">
+          <option value="">Selecciona tamaño </option>
+          <option value="pequeña">Pequeña</option>
+          <option value="Mediana">Mediana</option>
+          <option value="grande">Grande</option>
+        </select>
+      </div>
+      
+      <label>Tipo de masa</label> <br />
+      <div>
+        <select name="pan" class="masaPizza" required>
+          <option value="">Escoge la masa</option>
+          <option value="fina">Fina</option>
+          <option value="gruesa">Gruesa</option>
+          <option value="pan">Pan</option>
+        </select>
+      </section>
+    </div>
+    
+    
+    <h3>Ingrediendes</h3>
+    
+    <div class="ingredients">
+      <ul>
+        <li>
+          <input type="checkbox" name="Peperoni" id="Peperoni" />Peperoni
+        </li>
+        <li><input type="checkbox" name="cebolla" id="cebolla" />cebolla</li>
+        <li><input type="checkbox" name="tomate" id="tomate" />tomate</li>
+        <li>
+          <input type="checkbox" name="mozarella" id="mozarella" />mozarella
+        </li>
+        <li>
+          <input type="checkbox" name="pimenton" id="pimenton" />pimenton
+        </li>
+      </ul>
+    </div>
+    
+    <button class="pedir">PEDIR PIZZA</button>
+
+    <footer>
+      <p class="pedido">Mensaje de envio</p>
+    </footer>
+  </main>
+</body>
+
+</html>
