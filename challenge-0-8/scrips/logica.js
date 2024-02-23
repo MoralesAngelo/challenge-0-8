@@ -34,6 +34,8 @@ const ingredientsPizza = () => {
   });
 };
 
+ingredientsPizza();
+
 const pedirPizza = () => {
   const mensajePedido = document.querySelector('.pedido');
 
