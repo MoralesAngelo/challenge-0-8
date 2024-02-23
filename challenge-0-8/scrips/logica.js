@@ -22,16 +22,19 @@ const ingredientsPizza = () => {
   let checkBoxes = document.querySelectorAll(
     '.ingredients input[type="checkbox"]'
   );
+  let ingredientesSeleccionados = [];
 
   checkBoxes.forEach((checkbox) => {
     checkbox.addEventListener('change', () => {
       if (checkbox.checked) {
+        ingredientesSeleccionados.push(checkBoxes.name);
         console.log('Ingrediente seleccionado:', checkbox.name);
       } else {
         console.log('Ingrediente deseleccionado:', checkbox.name);
       }
     });
   });
+  return ingredientesSeleccionados;
 };
 
 ingredientsPizza();
@@ -39,7 +42,7 @@ ingredientsPizza();
 const pedirPizza = () => {
   const mensajePedido = document.querySelector('.pedido');
 
-  let ingredientsSelect = obtenerIngredientesSeleccionados();
+  let ingredientsSelect = ingredientsPizza();
 
   let mensaje = `Pedido confirmado, Tamaño: ${selectSize}, Masa: ${selectMasa}, Ingredientes: ${ingredientsSelect.join(
     ', '
@@ -48,21 +51,6 @@ const pedirPizza = () => {
 };
 
 document.querySelector('.pedir').addEventListener('click', pedirPizza);
-
-const obtenerIngredientesSeleccionados = () => {
-  let checkBoxes = document.querySelectorAll(
-    '.ingredients input[type="checkbox"]'
-  );
-  let ingredientesSeleccionados = [];
-
-  checkBoxes.forEach((checkbox) => {
-    if (checkbox.checked) {
-      ingredientesSeleccionados.push(checkbox.name);
-    }
-  });
-
-  return ingredientesSeleccionados;
-};
 
 sizePizza();
 masaPizza();
